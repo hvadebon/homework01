@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!--navbar-->
+<div id="navmen"></div>
+<!--html skeleton, initially loads here-->
+<div id="main"></div>
+<!--contact form-->
+<div id = "formx"></div>
+<!--hvProfile (home) -->
+<div id="index"></div>
+<!--footer-->
+<div id="foot"></div>
+
+<!--	need to figure out where to put this, and how to make it styled-->
+	<!--this is my custom style sheet-->
+<link rel="stylesheet" media="screen" href="cssprofile.css">
+	<link rel="stylesheet" src="cssprofile.css">
+
+	<script src="jsprofile.js"></script>
+	
+	 <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+
+
+</html>
